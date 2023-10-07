@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <db>
+        <host>localhost</host>
+        <port>3306</port>
+        <name>telegrambot</name>
+        <username>root</username>
+        <password></password>
+    </db>
+</config>
