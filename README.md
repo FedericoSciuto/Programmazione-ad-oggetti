@@ -20,6 +20,3 @@ Progetto sviluppato per l'esame di **Programmazione ad Oggetti**. Si tratta di u
 2.  **Configurazione:** Assicurati di configurare le credenziali di accesso al DB nella classe `Connessione.java`.
 3.  **Bot Token:** Sostituisci il token segreto nel codice di `Home_ButlerBot.java` con quello ottenuto da `@BotFather`.
 4.  **Esecuzione:** Esegui il comando `mvn clean compile exec:java`.
-
----
-*Relazione completa disponibile in formato PDF all'interno della repository.*
