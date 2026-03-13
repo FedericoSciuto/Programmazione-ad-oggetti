@@ -1,27 +1,25 @@
-# 🏠 HomeButler: Smart Home Telegram Bot
+# HomeButler - Java Telegram Bot 🤖🏠
 
-[![Java](https://img.shields.io/badge/Language-Java-orange.svg)](https://www.oracle.com/java/)
-[![MySQL](https://img.shields.io/badge/Database-MySQL-blue.svg)](https://www.mysql.com/)
+Progetto sviluppato per l'esame di **Programmazione ad Oggetti**. Si tratta di un sistema di simulazione Smart Home che integra un bot Telegram con un database relazionale per la gestione degli stati dei dispositivi.
 
-**HomeButler** è un bot Telegram sviluppato in Java che simula la gestione di una smart home. Il progetto esplora l'integrazione tra API di messaggistica, logica di controllo asincrona e persistenza dei dati.
+## 🛠️ Tecnologie e Pattern
+* **Linguaggio:** Java 11+
+* **Build Tool:** Maven (gestione dipendenze e build)
+* **Database:** MySQL (MariaDB)
+* **Librerie:** Telegram Bots API, JDBC
+* **Pattern:** Utilizzo di classi DAO per l'accesso ai dati e programmazione guidata dagli eventi per la gestione dei messaggi.
 
-## 🚀 Funzionalità
-- **Controllo Dispositivi:** Gestione stato (ON/OFF) di elettrodomestici e luci tramite comandi chat.
-- **Logica di Stato:** Il sistema verifica lo stato attuale sul DB prima di agire (es. evita di accendere un forno già attivo).
-- **Safety Simulation:** Thread in background che simula un sensore fumo con invio di alert critici casuali.
-- **Persistenza:** Ogni cambiamento di stato è sincronizzato in tempo reale su un database MySQL.
+## 🌟 Funzionalità Principali
+* **Controllo Remoto:** Accensione/spegnimento simulato di dispositivi tramite comandi Telegram.
+* **Monitoraggio Stato:** Il bot interroga il database per evitare azioni ridondanti (es. "Il forno è già acceso").
+* **Sistema di Alert:** Simulazione di un sensore fumo con invio di messaggi d'allerta basato su probabilità casuale (Thread dedicato).
+* **Configurazione Dinamica:** Organizzazione gerarchica Casa -> Stanza -> Dispositivo tramite database.
 
-## 🛠 Tech Stack
-- **Backend:** Java (JDK 11+) con Maven per la gestione dipendenze.
-- **Bot API:** Telegram Bots Library.
-- **Database:** MySQL per la memorizzazione dello stato dei dispositivi.
-- **Data Format:** XML per la configurazione dei parametri.
-
-## 📦 Installazione e Configurazione
-1. **Database:** Esegui lo script `telegrambot.sql`.
-2. **Bot Token:** Inserisci il tuo API Token ottenuto da @BotFather nel file `Home_ButlerBot.java`.
-3. **Build:** Esegui `mvn clean install`.
-4. **Run:** Avvia la classe `Main.java`.
+## 🚀 Come avviare il progetto
+1.  **Database:** Importa il file `telegrambot.sql` presente nella root del progetto sul tuo server MySQL locale.
+2.  **Configurazione:** Assicurati di configurare le credenziali di accesso al DB nella classe `Connessione.java`.
+3.  **Bot Token:** Sostituisci il token segreto nel codice di `Home_ButlerBot.java` con quello ottenuto da `@BotFather`.
+4.  **Esecuzione:** Esegui il comando `mvn clean compile exec:java`.
 
 ---
-*Nota: Questo progetto è stato realizzato a scopo didattico per l'esame di Programmazione ad oggetti. Per i dettagli teorici e i diagrammi UML, consulta la [Relazione PDF](./Relazione.pdf).*
+*Relazione completa disponibile in formato PDF all'interno della repository.*
