@@ -15,7 +15,7 @@ public class Home_ButlerBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "6067257365:AAGhgJc6Oth6-bbGFKGQxXYnTyuwJt-34wk";
+        //return "Inserire qui il token ottenuto da @BotFather";
     }
 
     public void startSmokeDetector() {
